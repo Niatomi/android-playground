@@ -6,6 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
@@ -21,8 +22,7 @@ fun Modifiers() {
     Column(
         Modifier
             .background(Color.Green)
-            .fillMaxHeight(0.9f)
-            .fillMaxWidth()
+            .fillMaxSize()
             .border(5.dp, Color.Magenta)
             .padding(5.dp)
             .border(5.dp, Color.Red)

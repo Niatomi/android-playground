@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -40,7 +41,10 @@ fun Navigation() {
             .fillMaxSize()
             .background(colorResource(id = R.color.white))
     ) {
-            Box(modifier = Modifier.padding(20.dp)) {
+            Box(modifier = Modifier
+                .fillMaxHeight(0.92f)
+                .fillMaxWidth()
+                .padding(20.dp)) {
                 NavHost(navController = navController, startDestination = Screens.DEFAULT_SCREEN.route) {
                     composable(route = Screens.IMAGE.route) { ImageScreen() }
                     composable(route = Screens.TEXT.route) { TextScreen() }
