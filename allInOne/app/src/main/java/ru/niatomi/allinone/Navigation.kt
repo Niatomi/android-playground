@@ -24,11 +24,15 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import ru.niatomi.allinone.routes.CircularProgressBar
+import ru.niatomi.allinone.routes.ConstraintLayoutScreen
 import ru.niatomi.allinone.routes.Display
+import ru.niatomi.allinone.routes.EffectHandlers
 import ru.niatomi.allinone.routes.ImageScreen
 import ru.niatomi.allinone.routes.InputFields
 import ru.niatomi.allinone.routes.Lists
 import ru.niatomi.allinone.routes.Modifiers
+import ru.niatomi.allinone.routes.SimpleAnimations
 import ru.niatomi.allinone.routes.State
 import ru.niatomi.allinone.routes.Styling
 import ru.niatomi.allinone.routes.TextScreen
@@ -54,6 +58,10 @@ fun Navigation() {
                     composable(route = Screens.STATE.route) { State() }
                     composable(route = Screens.INPUTS_FIELDS.route) { InputFields() }
                     composable(route = Screens.LISTS.route) { Lists() }
+                    composable(route = Screens.CONSTRAINT_LAYOUT.route) { ConstraintLayoutScreen() }
+                    composable(route = Screens.EFFECT_HANDLERS.route) { EffectHandlers() }
+                    composable(route = Screens.SIMPLE_ANIMATIONS.route) { SimpleAnimations() }
+                    composable(route = Screens.CIRCULAR_PROGRESS_BAR.route) { CircularProgressBar() }
                 }
             }
             ScreenSwitcher(navController)
